@@ -1,0 +1,73 @@
+<routes>
+        <vType id="bus"
+   			vClass="passenger" length="4" accel="2.5" decel="1.8"
+   			minGap="1" sigma="1.0" maxSpeed="30" guiShape="bus"/>
+
+        <vType id="car"
+   			vClass="passenger" length="3" accel="4.5" decel="2.2"
+   			minGap="1" sigma="1.0" maxSpeed="40" guiShape="passenger/sedan"/>
+
+        <vType id="bicycle"
+   			vClass="bicycle" length="2" accel="0.2" decel="0.2"
+   			minGap="1" sigma="1.0" maxSpeed="10" guiShape="bicycle"/>
+        
+        <vType id="truck"
+   			vClass="truck" length="5" accel="2.9" decel="0.4"
+   			minGap="1" sigma="1.0" maxSpeed="30" guiShape="truck"/>
+
+        <vType id="motorcycle"
+   			vClass="motorcycle" length="2" accel="3.0" decel="0.8"
+   			minGap="1" sigma="1.0" maxSpeed="40" guiShape="motorcycle"/>
+
+        <route id="route_AB" edges="rA-incoming rB-outgoing" />
+        <route id="route_BA" edges="rB-incoming rA-outgoing" />
+        <route id="route_AC" edges="rA-incoming rC-outgoing" />
+        <route id="route_CA" edges="rC-incoming rA-outgoing" />
+        <route id="route_AD" edges="rA-incoming rD-outgoing" />
+        <route id="route_DA" edges="rD-incoming rA-outgoing" />
+        <route id="route_BC" edges="rB-incoming rC-outgoing" />
+        <route id="route_CB" edges="rC-incoming rB-outgoing" />
+        <route id="route_BD" edges="rB-incoming rD-outgoing" />
+        <route id="route_DB" edges="rD-incoming rB-outgoing" />
+        <route id="route_CD" edges="rC-incoming rD-outgoing" />
+        <route id="route_DC" edges="rD-incoming rC-outgoing" />
+
+        <vehicle id="0" type="car" route="route_AB" depart="0"/>
+        <vehicle id="1" type="car" route="route_BA" depart="0"/>
+        <vehicle id="2" type="bus" route="route_CA" depart="1"/>
+        <vehicle id="3" type="bicycle" route="route_DB" depart="1"/>
+        <vehicle id="4" type="motorcycle" route="route_DB" depart="2"/>
+        <vehicle id="5" type="car" route="route_AD" depart="2"/>
+        
+        <vehicle id="6" type="truck" route="route_BA" depart="3"/>
+        <vehicle id="7" type="bus" route="route_CD" depart="3"/>
+        <vehicle id="8" type="bicycle" route="route_CA" depart="4"/>
+        <vehicle id="9" type="motorcycle" route="route_AB" depart="4"/>
+        <vehicle id="10" type="car" route="route_BD" depart="4"/>
+
+        <vehicle id="11" type="car" route="route_AB" depart="10"/>
+        <vehicle id="12" type="truck" route="route_AB" depart="10"/>
+        <vehicle id="13" type="bus" route="route_AC" depart="10"/>
+        <vehicle id="14" type="car" route="route_CA" depart="11"/>
+
+        <vehicle id="15" type="car" route="route_BA" depart="11"/>
+        <vehicle id="16" type="car" route="route_CA" depart="11"/>
+        <vehicle id="17" type="bicycle" route="route_DB" depart="12"/>
+        <vehicle id="18" type="car" route="route_DB" depart="12"/>
+        <vehicle id="19" type="car" route="route_AD" depart="12"/>
+
+        <vehicle id="20" type="car" route="route_CA" depart="20"/>
+        <vehicle id="21" type="bus" route="route_CD" depart="20"/>
+        <vehicle id="22" type="car" route="route_CD" depart="20"/>
+        <vehicle id="23" type="motorcycle" route="route_AB" depart="21"/>
+        <vehicle id="24" type="car" route="route_AB" depart="22"/>
+
+        <vehicle id="25" type="car" route="route_CB" depart="22"/>
+        <vehicle id="26" type="truck" route="route_CB" depart="22"/>
+        <vehicle id="27" type="bus" route="route_AC" depart="23"/>
+        <vehicle id="28" type="car" route="route_CA" depart="23"/>
+        <vehicle id="29" type="car" route="route_DB" depart="23"/>
+        <vehicle id="30" type="car" route="route_AD" depart="23"/>
+        
+        
+</routes>
